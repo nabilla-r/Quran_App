@@ -38,6 +38,7 @@ class QuranFragment : Fragment() {
                 is Resource.Success -> {
                     binding.rvQuran.apply {
                         val mAdapter = QuranAdapter()
+                        mAdapter.setData(it.data)
                         adapter = mAdapter
                         layoutManager = LinearLayoutManager(context)
                     }
